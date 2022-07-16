@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "habitacions",
+  "info": {
+    "singularName": "habitacion",
+    "pluralName": "habitacions",
+    "displayName": "habitacion"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "estado": {
+      "type": "enumeration",
+      "enum": [
+        "Disponible",
+        "Ocupada",
+        "En mantenimiento",
+        "En limpieza"
+      ]
+    },
+    "imagen": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "galeria": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "hotels": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::hotel.hotel",
+      "mappedBy": "habitacion"
+    }
+  }
+}
