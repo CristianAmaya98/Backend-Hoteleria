@@ -38,6 +38,12 @@
       "relation": "manyToOne",
       "target": "api::habitacion.habitacion",
       "inversedBy": "hotels"
+    },
+    "ciudads": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::ciudad.ciudad",
+      "mappedBy": "hotels"
     }
   }
 }
